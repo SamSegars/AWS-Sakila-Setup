@@ -1,0 +1,11 @@
+#!/bin/bash
+sudo yum install -y mariadb mariadb-server
+sudo systemctl start mariadb
+mysql_secure_installation
+systemctl enable mariadb
+wget https://downloads.mysql.com/docs/sakila-db.tar.gz
+tar -xf sakila-db.tar.gz
+echo "when mysql launches input next 2 lines (separately)"
+echo "source sakila-db/sakila-schema.sql"
+echo "source sakila-db/sakila-data.sql"
+mysql -u root -p
