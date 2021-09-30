@@ -1,5 +1,5 @@
 # AWS-Sakila-Setup
-Automates Sakila setup using aws labs
+Helps Sakila setup using aws labs
 Put into ~/Documents
 (may need to run chmod 745 Start and chmod 745 Sendtoserver)
 run ./Start 
