@@ -1,12 +1,14 @@
 #!/bin/bash
 
+whereami="$(pwd)"
 chmod 400 ~/Downloads/labsuser.pem
 ssh-add ~/Downloads/labsuser.pem
-echo "Input Username"
-read username
+
 echo "input bastion ip"
 read ip1
+
 echo "input other ip i guess?"
 read ip2
-scp -o "ProxyJump ec2-user@$ip1" /home/$username/Documents/BashScript/Sendtoserver ec2-user@$ip2:/home/ec2-user/
+
+scp -o "ProxyJump ec2-user@$ip1" $whereami/Sendtoserver ec2-user@$ip2:/home/ec2-user/
 ssh -J ec2-user@$ip1 ec2-user@$ip2
