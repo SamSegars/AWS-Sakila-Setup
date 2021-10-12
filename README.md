@@ -1,6 +1,5 @@
 # AWS-Sakila-Setup
-Helps Sakila setup using aws labs
-Put into ~/Documents <br>
+Helps Sakila setup using aws labs <br>
 run ./Start <br>
 when it is done you should be in your ec2 instance<br>
 run ./Sendtoserver <br>
